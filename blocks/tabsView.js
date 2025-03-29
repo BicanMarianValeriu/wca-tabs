@@ -18,22 +18,24 @@ store(NAMESPACE, {
 
             const elements = tabsElementsCache.filter(({ parent }) => parent === ref);
 
-            const context = getContext();            
+            const context = getContext();
             context.isOpened = elements.find(({ context: { isOpen } }) => isOpen)?.content;
 
             elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', (e) => {
                 const currentTarget = e.currentTarget;
                 context.isOpened = currentTarget;
                 const { classNames } = getConfig();
-                
+
                 currentTarget.classList.add(classNames?.show);
                 const hasOpen = elements.filter(({ content, context: { isOpen } }) => content !== currentTarget && isOpen);
                 hasOpen.map(({ toggle }) => toggle.click());
             }));
 
             elements.forEach(({ content }) => Events.on(content, 'hide.wp.collapse', (e) => {
-                if (context.isOpened === content) {
-                    return e.preventDefault();
+                if (e.target === content) {
+                    if (context.isOpened === content) {
+                        e.preventDefault();
+                    }
                 }
             }));
         },
