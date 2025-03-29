@@ -72,5 +72,6 @@
 		},
 		"__experimentalStyles": true,
 		"__experimentalSettings": true
-	}
+	},
+	"viewScriptModule": "@wecodeart/collapse"
 }
