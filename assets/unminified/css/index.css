@@ -1,0 +1,101 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./inc/support/modules/tabs/src/scss/index.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-wecodeart-tabs {
+  --wp--tabs-border-color: var(--wp--preset--color--accent);
+  --wp--tabs-border-width: 1px;
+  --wp--tabs-border-radius: 5px;
+  --wp--tabs-body-padding-x: 1.25rem;
+  --wp--tabs-body-padding-y: 1rem;
+  --wp--tabs-active-background: var(--wp--preset--color--accent);
+  --wp--tabs-active-color: currentColor;
+}
+.wp-block-wecodeart-tabs.is-horizontal {
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 640px) {
+  .wp-block-wecodeart-tabs.is-style-mobile-vertical {
+    flex-wrap: wrap;
+  }
+  .wp-block-wecodeart-tabs.is-style-mobile-vertical .wp-block-wecodeart-tabs-nav {
+    --scroll-shadow-color: var(--wp--preset--color--accent);
+    --scroll-shadow-size: 1rem;
+    --scroll-shadow-spread: calc(-0.5 * var(--scroll-shadow-size));
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow-x: auto;
+    animation-timeline: scroll(self x);
+    animation-name: scroll-shadow-inset;
+    animation-timing-function: linear;
+  }
+  .wp-block-wecodeart-tabs.is-style-mobile-vertical .wp-block-wecodeart-tabs-panels {
+    flex: 0 0 100%;
+  }
+}
+.wp-block-wecodeart-tabs-nav {
+  flex: none;
+  border: var(--wp--tabs-border-width) solid var(--wp--tabs-border-color);
+  border-radius: var(--wp--tabs-border-radius);
+  overflow: hidden;
+}
+.wp-block-wecodeart-tabs-nav.is-content-justification-center {
+  justify-content: center;
+}
+.wp-block-wecodeart-tabs-nav.is-content-justification-right {
+  justify-content: flex-end;
+}
+.wp-block-wecodeart-tabs-nav.is-content-justification-stretch {
+  justify-content: stretch;
+}
+.wp-block-wecodeart-tabs-nav-item,
+.wp-block-wecodeart-tabs-nav .wp-element-button {
+  background-color: transparent;
+  padding: var(--wp--tabs-body-padding-y) var(--wp--tabs-body-padding-x);
+  font-size: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.wp-block-wecodeart-tabs-nav-item:is(:hover, :focus),
+.wp-block-wecodeart-tabs-nav .wp-element-button:is(:hover, :focus) {
+  background-color: var(--wp--preset--color--accent);
+}
+.wp-block-wecodeart-tabs-nav-item:not(.collapsed) {
+  background-color: var(--wp--tabs-active-background);
+  color: var(--wp--tabs-active-color);
+}
+.wp-block-wecodeart-tabs-panels {
+  flex: 0 1 100%;
+  border: var(--wp--tabs-border-width) solid var(--wp--tabs-border-color);
+  border-radius: var(--wp--tabs-border-radius);
+}
+.wp-block-wecodeart-tabs-panel {
+  padding: var(--wp--tabs-body-padding-y) var(--wp--tabs-body-padding-x);
+}
+.theme-wecodeart .wp-block-wecodeart-tabs-panel {
+  display: none;
+}
+.wp-block-wecodeart-tabs-panel.collapsing {
+  width: initial !important;
+  height: initial !important;
+  opacity: 0;
+}
+.wp-block-wecodeart-tabs-panel.show {
+  display: block;
+}
+
+@keyframes scroll-shadow-inset {
+  from {
+    box-shadow: inset calc(-2 * var(--scroll-shadow-size)) 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color), inset 0 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color);
+  }
+  10%, 90% {
+    box-shadow: inset calc(-1 * var(--scroll-shadow-size)) 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color), inset var(--scroll-shadow-size) 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color);
+  }
+  to {
+    box-shadow: inset 0 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color), inset calc(2 * var(--scroll-shadow-size)) 0 var(--scroll-shadow-size) var(--scroll-shadow-spread) var(--scroll-shadow-color);
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

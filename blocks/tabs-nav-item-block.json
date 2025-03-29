@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/tabs-nav-item",
+	"title": "Tabs: Navigation Item",
+	"parent": [
+		"wecodeart/tabs-nav"
+	],
+	"category": "wca",
+	"description": "A single tabs navigation item.",
+	"keywords": [
+		"tabs",
+		"summary",
+		"toggle",
+		"disclosure"
+	],
+	"icon": "button",
+	"textdomain": "default",
+	"attributes": {
+		"tabId": {
+			"type": "string",
+			"default": ""
+		},
+		"isOpen": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"render": "file:./render-nav-item.php",
+	"supports": {
+		"html": false,
+		"inserter": false,
+		"reusable": false,
+		"remove": false,
+		"anchor": true,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false,
+				"blockGap": false
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	}
+}

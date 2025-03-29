@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/tabs-nav",
+	"title": "Tabs: Navigation",
+	"parent": [
+		"wecodeart/tabs"
+	],
+	"category": "wca",
+	"description": "Holds tabs navigation.",
+	"keywords": [
+		"tabs",
+		"summary",
+		"toggle",
+		"disclosure"
+	],
+	"icon": "button",
+	"textdomain": "default",
+	"attributes": {},
+	"render": "file:./render-nav.php",
+	"supports": {
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"layout": {
+			"allowCustomContentAndWideSize": false,
+			"allowSizingOnChildren": false,
+			"allowInheriting": false,
+			"allowSwitching": false,
+			"allowOrientation": true,
+			"allowJustification": true,
+			"allowVerticalAlignment": true,
+			"default": {
+				"type": "flex",
+				"orientation": "horizontal",
+				"flexWrap": "nowrap"
+			}
+		},
+		"shadow": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false,
+				"blockGap": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	}
+}

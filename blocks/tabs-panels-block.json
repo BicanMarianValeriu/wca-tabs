@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/tabs-panels",
+	"title": "Tabs: Panels",
+	"parent": [
+		"wecodeart/tabs"
+	],
+	"category": "wca",
+	"description": "Holds tabs panels.",
+	"keywords": [
+		"tabs",
+		"summary",
+		"toggle",
+		"disclosure"
+	],
+	"icon": "admin-page",
+	"textdomain": "default",
+	"attributes": {},
+	"render": "file:./render-panels.php",
+	"supports": {
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"shadow": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": true,
+				"blockGap": false
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	}
+}

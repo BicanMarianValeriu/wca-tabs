@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/tabs",
+	"title": "Tabs",
+	"category": "wca",
+	"description": "Hide and show additional content.",
+	"keywords": [
+		"tabs",
+		"summary",
+		"toggle",
+		"disclosure"
+	],
+	"icon": "welcome-widgets-menus",
+	"textdomain": "default",
+	"allowedBlocks": [
+		"wecodeart/tabs-nav",
+		"wecodeart/tabs-panels"
+	],
+	"attributes": {
+		"templateLock": {
+			"default": "insert",
+			"type": [
+				"string",
+				"boolean"
+			],
+			"enum": [
+				"all",
+				"insert",
+				"contentOnly",
+				false
+			]
+		}
+	},
+	"render": "file:./render-tabs.php",
+	"supports": {
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"layout": {
+			"allowCustomContentAndWideSize": false,
+			"allowSizingOnChildren": false,
+			"allowInheriting": false,
+			"allowSwitching": false,
+			"allowOrientation": true,
+			"allowJustification": true,
+			"allowVerticalAlignment": true,
+			"default": {
+				"type": "flex",
+				"orientation": "vertical",
+				"justifyContent": "stretch"
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"interactivity": true,
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	},
+	"styles": [
+		{
+			"name": "mobile-vertical",
+			"label": "Mobile Vertical"
+		}
+	],
+	"editorScript": [
+		"wp-block-wecodeart-tabs"
+	],
+	"viewStyle": [
+		"wp-block-wecodeart-tabs"
+	],
+	"viewScriptModule": "file:./tabsView.js"
+}

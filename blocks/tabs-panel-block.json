@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/tabs-panel",
+	"title": "Tabs: Panel",
+	"parent": [
+		"wecodeart/tabs-panels"
+	],
+	"category": "wca",
+	"description": "A single tab panel.",
+	"keywords": [
+		"tabs",
+		"summary",
+		"toggle",
+		"disclosure"
+	],
+	"icon": "welcome-write-blog",
+	"textdomain": "default",
+	"attributes": {
+		"isOpen": {
+			"type": "boolean",
+			"default": false
+		},
+		"tabId": {
+			"type": "string",
+			"default": ""
+		},
+		"templateLock": {
+			"type": [
+				"string",
+				"boolean"
+			],
+			"enum": [
+				"all",
+				"insert",
+				"contentOnly",
+				false
+			]
+		},
+		"allowedBlocks": {
+			"type": "array"
+		}
+	},
+	"render": "file:./render-panel.php",
+	"supports": {
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"layout": {
+			"allowCustomContentAndWideSize": true,
+			"allowSizingOnChildren": false,
+			"allowInheriting": false,
+			"allowSwitching": true,
+			"allowOrientation": true,
+			"allowJustification": true,
+			"allowVerticalAlignment": true
+		},
+		"spacing": {
+			"margin": false,
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": false,
+				"blockGap": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	}
+}
