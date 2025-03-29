@@ -16,6 +16,9 @@
 	],
 	"icon": "welcome-write-blog",
 	"textdomain": "default",
+	"usesContext": [
+		"anchor"
+	],
 	"attributes": {
 		"isOpen": {
 			"type": "boolean",
@@ -43,10 +46,10 @@
 	},
 	"render": "file:./render-panel.php",
 	"supports": {
-		"anchor": true,
-		"ariaLabel": true,
+		"anchor": false,
 		"html": false,
 		"align": false,
+		"reusable": false,
 		"color": {
 			"gradients": true,
 			"link": true,

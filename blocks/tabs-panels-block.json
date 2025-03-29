@@ -16,13 +16,21 @@
 	],
 	"icon": "admin-page",
 	"textdomain": "default",
-	"attributes": {},
+	"usesContext": [
+		"anchor"
+	],
+	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		}
+	},
 	"render": "file:./render-panels.php",
 	"supports": {
 		"anchor": true,
-		"ariaLabel": true,
 		"html": false,
 		"align": false,
+		"reusable": false,
 		"color": {
 			"gradients": true,
 			"link": true,

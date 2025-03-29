@@ -16,6 +16,9 @@
 	],
 	"icon": "button",
 	"textdomain": "default",
+	"usesContext": [
+		"anchor"
+	],
 	"attributes": {
 		"tabId": {
 			"type": "string",
@@ -28,11 +31,10 @@
 	},
 	"render": "file:./render-nav-item.php",
 	"supports": {
+		"anchor": false,
 		"html": false,
 		"inserter": false,
 		"reusable": false,
-		"remove": false,
-		"anchor": true,
 		"color": {
 			"gradients": true,
 			"link": true,

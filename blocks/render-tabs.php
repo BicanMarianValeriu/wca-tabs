@@ -25,7 +25,7 @@ use function WeCodeArt\Functions\{ get_prop, toJSON };
     ] ),
     'data-wp-init'          => 'callbacks.onTabChange',
     'role'                  => 'tablist',
-    'id'                    => wp_unique_id( 'wp-tabs-' ),
+    'id'                    => get_prop( $attributes, [ 'anchor' ] ) ?: wp_unique_id( 'wp-tabs-' ),
 ] ); ?>>
     <?php echo $content; ?>
 </div>
