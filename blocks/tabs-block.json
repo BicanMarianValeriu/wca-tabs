@@ -17,7 +17,14 @@
 		"wecodeart/tabs-nav",
 		"wecodeart/tabs-panels"
 	],
+	"providesContext": {
+		"anchor": "anchor"
+	},
 	"attributes": {
+		"anchor": {
+			"type": "string",
+			"default": ""
+		},
 		"templateLock": {
 			"default": "insert",
 			"type": [
