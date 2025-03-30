@@ -10,7 +10,7 @@ use function WeCodeArt\Functions\{ get_prop, toJSON };
     'classNames' => [
         'show' 			=> 'show',
         'collapse' 		=> 'collapse',
-        'collapsing' 	=> 'collapsing'
+        'collapsing'    => 'collapsing'
     ]
 ] );
 
