@@ -29,7 +29,7 @@ final class Tabs implements Integration {
     use Singleton;
 	use No_Conditionals;
 
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/**
 	 * Send to Constructor

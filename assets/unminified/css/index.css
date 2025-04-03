@@ -78,9 +78,10 @@
   display: none;
 }
 .wp-block-wecodeart-tabs-panel.collapsing {
+  display: none;
+  opacity: 0;
   width: initial !important;
   height: initial !important;
-  opacity: 0;
 }
 .wp-block-wecodeart-tabs-panel.show {
   display: block;
