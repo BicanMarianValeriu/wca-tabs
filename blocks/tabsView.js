@@ -19,12 +19,12 @@ store(NAMESPACE, {
             const elements = tabsElementsCache.filter(({ parent }) => parent === ref);
 
             const context = getContext();
+            const { classNames } = getConfig('wecodeart/collapse');
             context.isOpened = elements.find(({ context: { isOpen } }) => isOpen)?.content;
 
             elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', (e) => {
                 const currentTarget = e.currentTarget;
                 context.isOpened = currentTarget;
-                const { classNames } = getConfig();
 
                 currentTarget.classList.add(classNames?.show);
                 const hasOpen = elements.filter(({ content, context: { isOpen } }) => content !== currentTarget && isOpen);
