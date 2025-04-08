@@ -68,6 +68,7 @@
 }
 .wp-block-wecodeart-tabs-panels {
   flex: 0 1 100%;
+  max-width: 100%;
   border: var(--wp--tabs-border-width) solid var(--wp--tabs-border-color);
   border-radius: var(--wp--tabs-border-radius);
 }
