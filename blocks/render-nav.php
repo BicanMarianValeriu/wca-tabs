@@ -6,7 +6,8 @@ $nav_id = $block->context['anchor'] ? $block->context['anchor'] . '-nav' : '';
 
 ?>
 <nav <?php echo get_block_wrapper_attributes( [
-    'id' => get_prop( $attributes, [ 'anchor' ] ) ?: $nav_id,
+    'id'    => get_prop( $attributes, [ 'anchor' ] ) ?: $nav_id,
+    'role'  => 'tablist',
 ] ); ?>>
     <?php echo $content; ?>
 </nav>

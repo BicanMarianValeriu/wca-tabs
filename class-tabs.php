@@ -9,7 +9,7 @@
  * @subpackage 	Support\Modules\Formatting
  * @copyright   Copyright (c) 2024, WeCodeArt Framework
  * @since 		6.6.0
- * @version		6.6.0
+ * @version		6.6.8
  */
 
 namespace WeCodeArt\Support\Modules;
@@ -29,7 +29,7 @@ final class Tabs implements Integration {
     use Singleton;
 	use No_Conditionals;
 
-	const VERSION = '1.0.1';
+	const VERSION = '1.0.2';
 
 	/**
 	 * Send to Constructor

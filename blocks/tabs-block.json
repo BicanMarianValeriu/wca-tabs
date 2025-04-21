@@ -17,6 +17,107 @@
 		"wecodeart/tabs-nav",
 		"wecodeart/tabs-panels"
 	],
+	"variations": [
+		{
+			"name": "tabs-horizontal",
+			"title": "Tabs: Horizontal",
+			"isDefault": true,
+			"isActive": [
+				"layout"
+			],
+			"attributes": {
+				"layout": {
+					"type": "flex",
+					"orientation": "vertical",
+					"justifyContent": "stretch",
+					"verticalAlignment": "top"
+				}
+			},
+			"example": {
+				"attributes": {
+					"layout": {
+						"type": "flex",
+						"orientation": "vertical",
+						"justifyContent": "stretch",
+						"verticalAlignment": "top"
+					}
+				}
+			},
+			"innerBlocks": [
+				[
+					"wecodeart/tabs-nav",
+					{
+						"layout": {
+							"type": "flex",
+							"orientation": "horizontal",
+							"justifyContent": "left"
+						},
+						"style": {
+							"spacing": {
+								"blockGap": "0"
+							}
+						}
+					}
+				],
+				[
+					"wecodeart/tabs-panels"
+				]
+			],
+			"scope": [
+				"inserter"
+			]
+		},
+		{
+			"name": "tabs-vertical",
+			"title": "Tabs: Vertical",
+			"isDefault": false,
+			"isActive": [
+				"layout"
+			],
+			"attributes": {
+				"layout": {
+					"type": "flex",
+					"orientation": "horizontal",
+					"justifyContent": "left",
+					"verticalAlignment": "top"
+				}
+			},
+			"example": {
+				"attributes": {
+					"layout": {
+						"type": "flex",
+						"orientation": "horizontal",
+						"justifyContent": "left",
+						"verticalAlignment": "top"
+					}
+				}
+			},
+			"innerBlocks": [
+				[
+					"wecodeart/tabs-nav",
+					{
+						"layout": {
+							"type": "flex",
+							"orientation": "vertical",
+							"flexWrap": "nowrap",
+							"justifyContent": "stretch"
+						},
+						"style": {
+							"spacing": {
+								"blockGap": "0"
+							}
+						}
+					}
+				],
+				[
+					"wecodeart/tabs-panels"
+				]
+			],
+			"scope": [
+				"inserter"
+			]
+		}
+	],
 	"providesContext": {
 		"anchor": "anchor"
 	},
