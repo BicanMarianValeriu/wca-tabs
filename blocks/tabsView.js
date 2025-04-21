@@ -15,22 +15,20 @@ store(NAMESPACE, {
     callbacks: {
         onTabChange() {
             const { ref } = getElement();
-
-            const elements = tabsElementsCache.filter(({ parent }) => parent === ref);
-
             const context = getContext();
             const { classNames } = getConfig('wecodeart/collapse');
+            const elements = tabsElementsCache.filter(({ parent }) => parent === ref);
+
             context.isOpened = elements.find(({ context: { isOpen } }) => isOpen)?.content;
 
-            elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', (e) => {
-                const currentTarget = e.currentTarget;
-                context.isOpened = currentTarget;
-
-                currentTarget.classList.add(classNames?.show);
-                const hasOpen = elements.filter(({ content, context: { isOpen } }) => content !== currentTarget && isOpen);
-                hasOpen.map(({ toggle }) => toggle.click());
+            // Hide other tabs on open current
+            elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', ({ target }) => {
+                context.isOpened = target;
+                target.classList.add(classNames?.show);
+                elements.filter(({ content, context: { isOpen } }) => isOpen && content !== target).map(({ toggle }) => toggle.click());
             }));
 
+            // Prevent hide current tab if it is opened
             elements.forEach(({ content }) => Events.on(content, 'hide.wp.collapse', (e) => {
                 if (e.target === content) {
                     if (context.isOpened === content) {
