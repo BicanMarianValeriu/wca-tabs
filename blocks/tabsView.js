@@ -22,7 +22,7 @@ store(NAMESPACE, {
             context.isOpened = elements.find(({ context: { isOpen } }) => isOpen)?.content;
 
             // Hide other tabs on open current
-            elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', ({ target }) => {
+            elements.forEach(({ content }) => Events.on(content, 'show.wp.collapse', ({ currentTarget: target }) => {
                 context.isOpened = target;
                 target.classList.add(classNames?.show);
                 elements.filter(({ content, context: { isOpen } }) => isOpen && content !== target).map(({ toggle }) => toggle.click());
