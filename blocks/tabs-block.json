@@ -215,5 +215,5 @@
 	"viewStyle": [
 		"wp-block-wecodeart-tabs"
 	],
-	"viewScriptModule": "file:./tabsView.js"
+	"viewScriptModule": "@wecodeart/tabs"
 }

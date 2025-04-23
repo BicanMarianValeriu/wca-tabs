@@ -75,6 +75,13 @@ final class Tabs implements Integration {
 			wecodeart( 'version' ), 
 			true 
 		);
+
+		\wp_register_script_module(
+			'@wecodeart/tabs',
+			$this->get_asset( 'js', 'view' ),
+			[ '@wecodeart/collapse' ],
+			wecodeart( 'version' )
+		);
 	}
 
 	/**
